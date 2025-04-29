@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set variables
-ABUSEIPDB_API_KEY="ee8318a44fea92403abb24b208a93818272bf0a4e806111fa949aa42fde1a3356874d391e3d64320"  # Replace with your API key
+ABUSEIPDB_API_KEY="Your_Api_Key"  # Replace with your API key
 LIST_PATH="/var/ossec/etc/lists/abuseipdb_blacklist"  # Path to your CDB list
 TEMP_IP_LIST="/tmp/abuseipdb_ips.txt"  # Temporary file to store the IP list
 
