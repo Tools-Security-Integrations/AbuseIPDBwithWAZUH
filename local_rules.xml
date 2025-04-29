@@ -1,0 +1,9 @@
+<!-- Abnormal Destination IP Detection by AbuseIPDB list -->
+<group name="windows, sysmon, sysmon_event3">
+<rule id="101103" level="12">
+  <if_group>sysmon_event3</if_group>
+  <list field="win.eventdata.destinationIp" lookup="address_match_key">etc/lists/abuseipdb_blacklist</list>
+  <description>Sysmon - Event 3: Network connection to a suspicious IP from the AbuseIPDB blacklist by $(win.eventdata.image)</$
+  <group>sysmon_event3,</group>
+</rule>
+</group>
