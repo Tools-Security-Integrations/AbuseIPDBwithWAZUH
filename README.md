@@ -5,6 +5,8 @@ Using this integration we can integrate AbuseIPDB api key with our wazuh to dete
 
 We target Original rule.id to extract "data.win.eventdata.destinationIp" : 61605
 
+Note: Create account on abuseIPDB plateform and get your API key because we need this key in our script.
+
 step 1. Create a script in  /var/ossec/etc/lists/(new folder)/fetch_abuseipdb_blacklist.sh
 
 Step2: Give exicutable permission permission to the script 
@@ -12,6 +14,8 @@ Step2: Give exicutable permission permission to the script
        chmod 777 fetch_abuseipdb_blacklist.sh
 
        Before run this script need to install " sudo yum install jq "  # For CentOS/RHEL-based systems
+
+       then exicute this script to fetch abuseipdb suspicious ip list using api
 
 Step 3: After that go to /var/ossec/etc/lists/ and check for newly created "abuseipdb_blacklist" list.
 
